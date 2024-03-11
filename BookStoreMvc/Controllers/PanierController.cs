@@ -1,0 +1,27 @@
+﻿using BLL;
+using Microsoft.AspNetCore.Mvc;
+using Models.Panier;
+using NuGet.Protocol.Core.Types;
+
+namespace SiteWeb.Controllers
+{
+    public class PanierController : Controller
+    {
+        public IActionResult Index(int id)
+        {
+            if (id == 0 || id == null)
+            {
+                return NotFound();
+            }
+        
+            PanierService panierService = new PanierService();
+            panierService.CreatePanier(id);
+
+
+
+            ViewData["NomPanier"] = "Mon Panier";
+            ViewData["Title"] = "Mon Panier";
+            return View(panierService.GetPanier());
+        }
+    }
+}

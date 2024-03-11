@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    }
+    <style>
+     
+        .carousel {
+        background-image: url('https://png.pngtree.com/background/20210709/original/pngtree-open-book-background-picture-image_580860.jpg');
+          
+            background-size: cover;
+            background-position: center;
+              height: 400px;
+        }
+    </style>
+
+<div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Welcome+To+our+Book+Store" class="d-block w-100" alt="Welcome to our Book Store">
+          <div class="carousel-caption d-none d-md-block">
+                <p class="fst-italic">“Ne plus lire depuis longtemps, c'est comme perdre un ami important.”</p>
+       
+      </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Find+your+favorite+books+and+more+!" class="d-block w-100" alt="Find your favorite books and more!">
+   <div class="carousel-caption d-none d-md-block">
+        <a href="@Url.Action("Login", "User")" class="btn btn-primary">Browse Books</a>
+</div>
+        </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

@@ -1,0 +1,36 @@
+﻿@model Models.BookDetailVM;
+<div class="card ">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="~/produit/1/1_015.jpg"
+                 class="https://media.hachette.fr/fit-in/780x1280/imgArticle/CALMANNLEVY/2021/9782702165546-001-X.jpeg?source=web" alt="Musso : La vie est un roman">
+
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Title</h5>
+                <p class="card-text">@Model.Description</p>
+                <p class="card-text">@Model.Author</p>
+                <p class="card-text">@Model.Prix</p>
+
+
+
+                <form asp-controller="Panier"
+                      asp-action="Index">
+
+                    <input type="number" name="nbrArticle" id="nbrArticle" />
+                    <input type="submit"
+                           class="btn btn-primary">Ajouter Panier</>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

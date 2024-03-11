@@ -1,0 +1,51 @@
+﻿@model List<Models.Categorie.CategorieVM>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            string pathPict = $"imgCategorie/{item.NomImage}";
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="@pathPict" class="card-img-top" style="height: 200px;" alt="@item.Nom">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Nom</h5>
+                        <p class="card-text">@item.Description</p>
+                        <a href="@Url.Action("Details", "Book", new { id = item.Id })" class="btn btn-primary">Détail</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="https://media.hachette.fr/fit-in/780x1280/imgArticle/CALMANNLEVY/2021/9782702165546-001-X.jpeg?source=web" class="card-img-top" alt="Muso">
+                <div class="card-body">
+                    <h5 class="card-title">Musso</h5>
+                    <p class="card-text">POUR LUI, TOUT EST ÉCRIT D'AVANCE POUR ELLE TOUT RESTE À ÉCRIRE« Un jour d’avril, ma fille de trois ans, Carrie, a disparu alors que nous jouions toutes les deux à cache-cache dans mon appartement de Brooklyn. »</p>
+                    <a href="@Url.Action("Details", "Book", new { id = "MussoId" })" class="btn btn-primary">Détail</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="https://www.voir-de-pres.fr/wp-content/uploads/2021/08/Le-Malade-imaginaire-VDP-Couv-165-768x1181.jpg" class="card-img-top" alt="Muso">
+                <div class="card-body">
+                    <h5 class="card-title">Molière</h5>
+                    <p class="card-text">Autour d’Argan, l’hypocondriaque, il n’y a que des hypocrites qui en veulent à son argent. Avec Le Malade imaginaire, Molière nous invite à rire des ...</p>
+                    <a href="@Url.Action("Details", "Book", new { id = "MoliereId" })" class="btn btn-primary">Détail</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="https://images.epagine.fr/226/9782253004226_1_75.jpg" class="card-img-top" alt="Emilie Zola">
+                <div class="card-body">
+                    <h5 class="card-title">Emilie Zola</h5>
+                    <p class="card-text">" 1885. Disparition de Hugo. Apparition de Germinal., Voici, dans la France moderne et industrielle, les " Misérables " de Zola. Ce roman des ....</p>
+                    <a href="@Url.Action("Details", "Book", new { id = "ZolaId" })" class="btn btn-primary">Détail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

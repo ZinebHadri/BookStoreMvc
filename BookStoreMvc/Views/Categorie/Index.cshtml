@@ -1,0 +1,19 @@
+﻿@model List<Models.Categorie.CategorieVM>
+
+<h1>Catégories des Books</h1>
+<form role="search">
+    <div>
+        <select id="categorie" name="categorie">
+            @foreach (var category in Model)
+            {
+                <option value="@category.Id">@category.Nom</option>
+            }
+        </select>
+        <input type="search"
+               id="maRecherche"
+               name="q"
+               placeholder="Rechercher sur le site…"
+               aria-label="Rechercher parmi le contenu du site" />
+        <button>Rechercher</button>
+    </div>
+</form>
